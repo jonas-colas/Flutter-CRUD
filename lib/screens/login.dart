@@ -34,9 +34,9 @@ class _LoginPageState extends State<LoginPage> {
                   "Hello",
                   style: TextStyle(fontSize: 70, fontWeight: FontWeight.bold),
                 ),
-                const Text(
+                Text(
                   "Sign into your account",
-                  style: TextStyle(fontSize: 20, color: Colors.grey),
+                  style: TextStyle(fontSize: 20, color: Colors.grey[500]),
                 ),
                 const SizedBox(height: 50),
                 Container(
@@ -94,6 +94,59 @@ class _LoginPageState extends State<LoginPage> {
                             const BorderSide(color: Colors.white, width: 1.0),
                       ),
                     ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(),
+                    ),
+                    Text(
+                      "Forgot your Password?",
+                      style: TextStyle(fontSize: 20, color: Colors.grey[500]),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: w * 0.17),
+          Container(
+            width: w * 0.65,
+            height: h * 0.08,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
+              image: const DecorationImage(
+                image: AssetImage("images/loginbtn.png"),
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: const Center(
+              child: Text(
+                "Sign in",
+                style: TextStyle(
+                  fontSize: 34,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+          SizedBox(height: w * 0.1),
+          RichText(
+            text: TextSpan(
+              text: "Don't have an account?",
+              style: TextStyle(
+                color: Colors.grey[500],
+                fontSize: 20,
+              ),
+              children: const [
+                TextSpan(
+                  text: " Create",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
                   ),
                 ),
               ],
