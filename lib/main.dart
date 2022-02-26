@@ -1,3 +1,4 @@
+import 'package:crud/screens/register.dart';
 import 'package:flutter/material.dart';
 import 'package:crud/screens/login.dart';
 
@@ -6,6 +7,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,7 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage(),
+      // home: const LoginPage(),
+      home: const RegisterPage(),
     );
   }
 }
