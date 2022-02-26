@@ -1,5 +1,3 @@
-import 'package:crud/screens/register.dart';
-import 'package:crud/screens/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:crud/screens/login.dart';
 import 'package:get/get.dart';
@@ -19,9 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const WelcomePage(),
       home: const LoginPage(),
-      // home: const RegisterPage(),
     );
   }
 }

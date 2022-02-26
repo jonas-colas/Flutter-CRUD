@@ -1,4 +1,7 @@
+import 'package:crud/screens/register.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -120,7 +123,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     Text(
                       "Forgot your Password?",
-                      style: TextStyle(fontSize: 20, color: Colors.grey[500]),
+                      style: TextStyle(fontSize: 16, color: Colors.grey[500]),
                     ),
                   ],
                 ),
@@ -157,13 +160,16 @@ class _LoginPageState extends State<LoginPage> {
                 color: Colors.grey[500],
                 fontSize: 20,
               ),
-              children: const [
+              children: [
                 TextSpan(
                   text: " Sign up",
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 20,
+                    fontWeight: FontWeight.bold,
                   ),
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () => Get.to(() => const RegisterPage()),
                 ),
               ],
             ),

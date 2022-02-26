@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({Key? key}) : super(key: key);
@@ -171,6 +173,25 @@ class RegisterPage extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
+            ),
+          ),
+          SizedBox(height: w * 0.03),
+          RichText(
+            text: TextSpan(
+              // recognizer: TapGestureRecognizer()..onTap = () => Get.back(),
+              text: "Already have an account?",
+              style: TextStyle(fontSize: 16, color: Colors.grey[500]),
+              children: [
+                TextSpan(
+                  text: " Sign in",
+                  style: const TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  recognizer: TapGestureRecognizer()..onTap = () => Get.back(),
+                ),
+              ],
             ),
           ),
           SizedBox(height: w * 0.1),
